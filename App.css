@@ -1,0 +1,83 @@
+/* App.css */
+:root {
+  --primary: #6c63ff;     /* Purple */
+  --accent: #ffcc00;      /* Yellow */
+  --dark: #222;
+  --light: #f9f9f9;
+  --text: #333;
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #5848e0;
+}
+
+.btn-secondary {
+  background: var(--accent);
+  color: var(--dark);
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #e6b800;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+section {
+  scroll-margin-top: 80px; /* prevents content from hiding under sticky header */
+}
+
+html {
+  scroll-behavior: smooth;
+}

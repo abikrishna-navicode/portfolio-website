@@ -1,52 +1,101 @@
 import React from "react";
-import "../styles/Projects.css";
-import cryptoImg from "../assets/cy.jpg";
-import weddingImg from "../assets/wd.jpg";
-import cryptoAdminImg from "../assets/ap.jpg";
+import "./../styles/Projects.css";
+import cryptoImg from "../assets/cy.jpg"; // replace with your actual image path
+import weddingImg from "../assets/wd.jpg"; // replace with your actual image path
+import adminImg from "../assets/ap.jpg"; // replace with your actual image path
 
 export default function Projects() {
   const projects = [
     {
-      img: cryptoImg,
       title: "Crypto Website",
-      desc: "Convert loyalty points into cash with wallet integration for seamless transactions.",
+      description:
+        "Convert loyalty points into cash with wallet integration for seamless transactions.",
+      image: cryptoImg,
       tags: ["React", "Blockchain", "Wallet Integration"],
-      link: "#"
+      link: "/sample-project",
     },
     {
-      img: weddingImg,
       title: "Wedding Hall Booking Website",
-      desc: "A modern booking platform for wedding halls with search, booking, and payment features.",
+      description:
+        "A modern booking platform for wedding halls with search, booking, and payment features.",
+      image: weddingImg,
       tags: ["React", "UI/UX Design", "Tailwind CSS"],
-      link: "#"
+      link: "/sample-project",
     },
     {
-      img: cryptoAdminImg,
       title: "Crypto Website Admin Panel",
-      desc: "Front-end development for admin dashboard to manage users, wallets, and transactions.",
+      description:
+        "Front-end development for admin dashboard to manage users, wallets, and transactions.",
+      image: adminImg,
       tags: ["React", "Dashboard", "Admin Panel"],
-      link: "#"
-    }
+      link: "/sample-project",
+    },
   ];
 
   return (
     <section id="projects" className="projects">
-      <h2 className="section-title">Projects</h2>
-      <p className="section-subtitle">A showcase of my recent work and creative projects</p>
+      <div className="projects-inner">
+        <h2 className="section-head">Projects</h2>
+        <p className="section-sub">
+          Selected work with live links, client feedback, and real-world use cases.
+        </p>
 
-      <div className="projects-container">
-        {projects.map((p, i) => (
-          <a key={i} href={p.link} className="project-card" style={{ animationDelay: `${i * 0.2}s` }}>
-            <img src={p.img} alt={p.title} />
-            <h3>{p.title}</h3>
-            <p>{p.desc}</p>
-            <div className="project-tags">
-              {p.tags.map((tag, index) => (
-                <span key={index} className="tag">{tag}</span>
-              ))}
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div key={index} className="project-card">
+              <div className="image-container">
+                <img src={project.image} alt={project.title} />
+              </div>
+              <div className="project-content">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="project-tags">
+                  {project.tags.map((tag, i) => (
+                    <span key={i} className="tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a href={project.link} className="project-btn">
+                  View Project
+                </a>
+              </div>
             </div>
+          ))}
+        </div>
+
+        {/* Project Contact Section */}
+        <div className="project-contact">
+          <h3>Interested in Collaborating?</h3>
+          <p>
+            Let's create something amazing together! Reach out for project
+            discussions or collaborations.
+          </p>
+          <a href="/contact" className="contact-btn">
+            Contact Me
           </a>
-        ))}
+        </div>
+
+        {/* Clients Feedback Section */}
+        <div className="clients-feedback">
+          <h3>Clients Feedback</h3>
+          <div className="feedback-grid">
+            <div className="feedback-card">
+              <p>
+                “Working with you was an absolute pleasure! The project exceeded
+                expectations in both design and performance.”
+              </p>
+              <h4>- Client A</h4>
+            </div>
+            <div className="feedback-card">
+              <p>
+                “Impressed with the professionalism and timely delivery. Highly
+                recommend for any creative web project.”
+              </p>
+              <h4>- Client B</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

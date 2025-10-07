@@ -1,4 +1,3 @@
-// components/Resume.jsx
 import React from "react";
 import "../styles/Resume.css";
 
@@ -19,13 +18,12 @@ export default function Resume() {
   ];
 
   return (
-    <section id="resume" className="resume">
-      <h2 className="section-title">Resume</h2>
-      <p className="section-subtitle">Professional learning and achievements</p>
+    <div className="resume">
+      <h2 className="section-title">Education & Certifications</h2><br/>
 
       <div className="resume-container">
         {certifications.map((item, i) => (
-          <div key={i} className="resume-card">
+          <div key={i} className="resume-card" style={{ animationDelay: `${i * 0.2}s` }}>
             <span className="resume-year">{item.year}</span>
             <h3>{item.title}</h3>
             <h4>{item.place}</h4>
@@ -33,6 +31,6 @@ export default function Resume() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
