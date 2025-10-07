@@ -41,7 +41,7 @@
 }
 
 .info-item .icon {
-  color: #007bff;
+  color: #00aaff;
 }
 
 .contact-form {
@@ -64,11 +64,11 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #007bff;
+  border-color: #00aaff;
 }
 
 .btn-submit {
-  background: #007bff;
+  background: #00aaff;
   color: #fff;
   padding: 0.8rem 1.2rem;
   border: none;
@@ -80,5 +80,5 @@
 }
 
 .btn-submit:hover {
-  background: #0056b3;
+  background: #00aaff;
 }

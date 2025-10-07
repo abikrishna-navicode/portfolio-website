@@ -1,48 +1,49 @@
 import React from "react";
 import "../styles/About.css";
+import Resume from "./Resume";
+import { FaBriefcase } from "react-icons/fa";
 
 export default function About() {
   return (
     <section id="about" className="about">
-      <h2 className="section-title">About Me</h2>
-      <p className="section-subtitle">Data-driven insights meet thoughtful design</p>
+      {/* About Header */}
+      <div className="about-header">
+        <h2>About Me</h2>
+        <p>A unique blend of analytical thinking and creative design expertise</p>
+      </div>
 
-      <div className="about-container">
-        {/* Left Side */}
+      {/* About Content */}
+      <div className="about-content">
+        {/* LEFT SIDE */}
         <div className="about-left">
           <p>
-            Hi, I’m Abikrishna 👋 A passionate Business Analyst and UI/UX Engineer.  
-            I focus on bridging business needs with intuitive design solutions.
+            I'm a hybrid professional who thrives at the intersection of business
+            strategy and user experience design. With a strong foundation in
+            Information Systems and specialized training in Human-Computer
+            Interaction, I bring a unique perspective to every project.
           </p>
-
-          <div className="job-role">
-            <h4>💼 Job Role</h4>
-            <p>Business Analyst & UI/UX Engineer</p>
-          </div>
-
-          <div className="skills-details">
-            <h4>🛠 Core Skills</h4>
-            <ul>
-              <li>Requirement Analysis & Documentation</li>
-              <li>User Research & Wireframing</li>
-              <li>Prototyping & Usability Testing</li>
-              <li>Frontend Development (React, HTML, CSS)</li>
-            </ul>
-          </div>
+          <p>
+            My approach combines data-driven business analysis with empathetic
+            user research to create digital products that not only meet business
+            objectives but also delight users.
+          </p>
         </div>
 
-        {/* Right Side */}
+        {/* RIGHT SIDE */}
         <div className="about-right">
-          <h4>🚀 Career Journey</h4>
+          <h3>
+            <FaBriefcase className="icon" /> Career Journey
+          </h3>
           <div className="career-card">
-            <p>
-              With 3+ years of experience, I’ve collaborated with cross-functional teams,
-              turning complex business requirements into engaging, user-friendly applications.  
-              My approach combines analytics, research, and design thinking.
-            </p>
+            <span className="year">2025 - Present</span>
+            <h4>Business Analyst & UI/UX Engineer</h4>
+            <p>Navicode.cloud</p>
           </div>
         </div>
       </div>
+
+      {/* Resume Section */}
+      <Resume />
     </section>
   );
 }

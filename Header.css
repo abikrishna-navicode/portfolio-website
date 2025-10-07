@@ -1,63 +1,126 @@
 .header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 20px 10%;
+  background: #0b2431;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 150px;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 22px;
   font-weight: bold;
-  color: #007bff;
+  color: #8ed5f9;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 24px;
   list-style: none;
 }
 
-.nav ul li a {
-  text-decoration: none;
-  color: #333;
+.nav a {
   font-weight: 500;
-  padding-bottom: 4px;
+  padding: 6px 10px;
+  text-decoration: none;
+  color: white;
   transition: color 0.3s ease;
 }
 
-.nav ul li a.active {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
+.nav a:hover {
+  color: #00aaff;
 }
 
-.header-buttons {
-  display: flex;
-  gap: 1rem;
+.nav a.active {
+  color: #00aaff;
+  border-bottom: none;
 }
 
-.btn-cv, .btn-download {
-  background: #007bff;
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background 0.3s ease;
+.btn-download {
+  background: #00aaff;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.btn-cv:hover, .btn-download:hover {
-  background: #0056b3;
+.btn-download:hover {
+  background: white;
+  color: #00aaff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,170,255,0.5);
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  width: 28px;
+  height: 22px;
+  position: relative;
+}
+
+.menu-toggle span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.4s ease;
+}
+
+.menu-toggle span:nth-child(1) {
+  top: 0;
+}
+.menu-toggle span:nth-child(2) {
+  top: 9px;
+}
+.menu-toggle span:nth-child(3) {
+  top: 18px;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
 }
 
 @media (max-width: 768px) {
-  .nav ul {
+  .header-left {
     flex-direction: column;
-    gap: 1rem;
+    gap: 10px;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .btn-download {
+    display: none;
   }
 }

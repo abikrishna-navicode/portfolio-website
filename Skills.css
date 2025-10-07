@@ -10,12 +10,6 @@
   margin-bottom: 0.5rem;
 }
 
-.section-subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 3rem;
-}
-
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -26,29 +20,30 @@
 
 .skill-card {
   background: #f9f9f9;
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
   text-align: left;
-  transition: transform 0.4s, box-shadow 0.4s;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
   opacity: 0;
-  transform: translateY(30px) scale(0.98);
+  transform: translateY(40px) scale(0.95);
   animation: fadeInUp 0.8s ease forwards;
 }
 
 .skill-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
 }
 
 .skill-icon {
-  color: #007bff;
+  color: #00aaff;
   margin-bottom: 1rem;
 }
 
 .skill-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 0.3rem;
+  color: #222;
 }
 
 .skill-card h4 {
@@ -57,18 +52,15 @@
   margin-bottom: 0.8rem;
 }
 
-.skill-card p {
+.skill-desc {
+  font-size: 0.95rem;
   color: #444;
-  margin-bottom: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
 }
 
 .progress-group {
   margin-bottom: 0.8rem;
-}
-
-.progress-name {
-  font-size: 0.9rem;
-  font-weight: 500;
 }
 
 .progress-bar {
@@ -81,8 +73,8 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #007bff, #00c6ff);
-  transition: width 1s ease-in-out;
+  background: linear-gradient(90deg, #00aaff, #00c6ff);
+  transition: width 1.2s ease-in-out;
 }
 
 .progress-text {
@@ -93,10 +85,36 @@
 
 /* Animation */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px) scale(0.98); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.skill-card:nth-child(1) { animation-delay: 0.1s; }
-.skill-card:nth-child(2) { animation-delay: 0.3s; }
-.skill-card:nth-child(3) { animation-delay: 0.5s; }
+/* Animation delay per card */
+.skill-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skill-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.skill-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills {
+    padding: 3rem 1.5rem;
+  }
+  .skill-card {
+    padding: 1.5rem;
+  }
+  .skill-card h3 {
+    font-size: 1.2rem;
+  }
+}
