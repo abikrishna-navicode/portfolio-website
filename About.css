@@ -1,14 +1,17 @@
 .about {
   padding: 80px 10%;
-  background: #f9f9fb;
-  color: #00c9ff;
+  background: linear-gradient(135deg, #1a1f3d, #2e42d4);
+  color: #fff;
+  text-align: center;
   position: relative;
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
+/* Header */
 .about-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .about-header h2 {
@@ -19,142 +22,112 @@
 
 .about-header p {
   font-size: 1.1rem;
-  color: #2e42d4;
+  color: #cdd8ff;
 }
 
-.about-content {
+/* Timeline Section */
+.timeline-section {
+  background: #fff;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 0 auto 80px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  max-width: 1000px;
+}
+
+.timeline-title {
+  color: #1a1f3d;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.timeline-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 50px;
-  margin-bottom: 50px;
+  position: relative;
+  flex-wrap: wrap;
 }
 
-.about-left {
-  flex: 1;
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: #00c9ff;
+  z-index: 1;
 }
 
-.about-left p {
-  margin-bottom: 20px;
-  line-height: 1.6;
-  color: #00c9ff;
-}
-
-.about-right {
-  flex: 1;
-}
-
-.about-right h3 {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #00c9ff;
-}
-
-.about-right .icon {
-  margin-right: 8px;
-  color: #00c9ff;
-}
-
-.career-card {
-  background: #1a1f3d;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  border-left: 4px solid #00c9ff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.career-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.career-card .year {
-  font-size: 14px;
-  color: #00c9ff;
-  font-weight: 600;
-}
-
-.career-card h4 {
-  margin: 8px 0 4px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.career-card p {
-  font-size: 14px;
-  color: #ccc;
-}
-
-/* Resume */
-.resume {
-  padding: 50px 0;
-  background: #2e42d4;
-  color: #f5f5f5;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: bold;
+.timeline-item {
+  position: relative;
   text-align: center;
-  margin-bottom: 0.5rem;
-  color: #00c9ff;
+  flex: 1;
+  min-width: 150px;
+  margin: 20px 0;
+  z-index: 2;
 }
 
-.section-subtitle {
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 4px solid #00c9ff;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.timeline-year {
+  color: #1a1f3d;
+  font-weight: 700;
   font-size: 1.1rem;
-  color: #6038d9;
-  text-align: center;
-  margin-bottom: 3rem;
 }
 
-.resume-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+.timeline-content {
+  margin-top: 15px;
+  color: #333;
+  max-width: 180px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.resume-card {
-  padding: 2rem;
-  background: #1f3196;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(67, 73, 239, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
+.timeline-content h4 {
+  font-size: 1rem;
+  color: #2e42d4;
+  margin-bottom: 8px;
 }
 
-.resume-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(70, 42, 210, 0.3);
-}
-
-.resume-year {
+.timeline-content p {
   font-size: 0.9rem;
-  color: #00c9ff;
-  font-weight: bold;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  color: #555;
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .about-content {
+@media (max-width: 768px) {
+  .timeline-container {
     flex-direction: column;
+    align-items: center;
   }
-  .about-left,
-  .about-right {
-    width: 100%;
+
+  .timeline-container::before {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    text-align: left;
   }
 }

@@ -2,6 +2,7 @@
   padding: 5rem 2rem;
   background: #fff;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .section-title {
@@ -60,6 +61,7 @@
   font-size: 1rem;
   outline: none;
   transition: border 0.3s;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-form input:focus,
@@ -67,8 +69,9 @@
   border-color: #00aaff;
 }
 
+/* ✨ Button Styles with Hover Animation */
 .btn-submit {
-  background: #00aaff;
+  background: linear-gradient(90deg, #00aaff);
   color: #fff;
   padding: 0.8rem 1.2rem;
   border: none;
@@ -76,9 +79,33 @@
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
+/* Hover effect — white background, blue text */
 .btn-submit:hover {
-  background: #00aaff;
+  background: #ffffff;
+  color: #00aaff;
+  border: 1px solid #00aaff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+}
+
+/* Click effect */
+.btn-submit:active {
+  transform: scale(0.97);
+}
+
+/* Subtle glowing animation */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0px rgba(0, 170, 255, 0.5); }
+  50% { box-shadow: 0 0 10px rgba(0, 170, 255, 0.8); }
+  100% { box-shadow: 0 0 0px rgba(0, 170, 255, 0.5); }
+}
+
+.btn-submit {
+  animation: pulseGlow 2.5s infinite;
 }

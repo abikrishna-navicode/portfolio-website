@@ -1,8 +1,8 @@
 import React from "react";
 import "./../styles/Projects.css";
-import cryptoImg from "../assets/cy.jpg"; // replace with your actual image path
-import weddingImg from "../assets/wd.jpg"; // replace with your actual image path
-import adminImg from "../assets/ap.jpg"; // replace with your actual image path
+import cryptoImg from "../assets/cy.jpg"; 
+import weddingImg from "../assets/wd.jpg"; 
+import adminImg from "../assets/ap.jpg";
 
 export default function Projects() {
   const projects = [
@@ -64,18 +64,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Project Contact Section */}
-        <div className="project-contact">
-          <h3>Interested in Collaborating?</h3>
-          <p>
-            Let's create something amazing together! Reach out for project
-            discussions or collaborations.
-          </p>
-          <a href="/contact" className="contact-btn">
-            Contact Me
-          </a>
-        </div>
-
         {/* Clients Feedback Section */}
         <div className="clients-feedback">
           <h3>Clients Feedback</h3>
@@ -94,6 +82,17 @@ export default function Projects() {
               </p>
               <h4>- Client B</h4>
             </div>
+             {/* Project Contact Section */}
+        <div className="project-contact">
+          <h3>Interested in Collaborating?</h3>
+          <p>
+            Let's create something amazing together! Reach out for project
+            discussions or collaborations.
+          </p>
+          <a href="#contact" className="contact-btn">
+            Contact Me
+          </a>
+        </div>
           </div>
         </div>
       </div>

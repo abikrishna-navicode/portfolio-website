@@ -5,25 +5,28 @@ export default function Resume() {
   const certifications = [
     {
       year: "2025",
-      title: "Certified UX Designer",
-      place: "Google UX Certification",
-      desc: "Specialized in design thinking, wireframes, and usability testing."
+      title: "LinkedIn Learning – UI/UX Design Certificate",
+      place: "LinkedIn Learning",
+      desc: "Completed advanced training in UI/UX design principles, wireframing, and user research.",
     },
     {
       year: "2025",
-      title: "B.Se in Software Engineering",
-      place: "The Open University of Srilanka",
-      desc: "Comprehensive training on Software Engineering for development and designing."
-    }
+      title: "B.Sc in Software Engineering",
+      place: "The Open University of Sri Lanka",
+      desc: "Comprehensive training in software development and user-centered design.",
+    },
   ];
 
   return (
-    <div className="resume">
-      <h2 className="section-title">Education & Certifications</h2><br/>
+    <section id="resume" className="resume">
+      <div className="resume-header">
+        <h2>Education & Certifications</h2>
+        <p>Continuous learning to improve my skills and expertise</p>
+      </div>
 
       <div className="resume-container">
-        {certifications.map((item, i) => (
-          <div key={i} className="resume-card" style={{ animationDelay: `${i * 0.2}s` }}>
+        {certifications.map((item, index) => (
+          <div key={index} className="resume-card">
             <span className="resume-year">{item.year}</span>
             <h3>{item.title}</h3>
             <h4>{item.place}</h4>
@@ -31,6 +34,6 @@ export default function Resume() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
