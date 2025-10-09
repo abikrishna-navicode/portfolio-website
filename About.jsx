@@ -35,12 +35,14 @@ export default function About() {
         <h3 className="timeline-title">
           <FaBriefcase className="icon" /> Career Timeline
         </h3>
-        <div className="timeline-container">
+
+        <div className="timeline-vertical">
           {timelineData.map((item, index) => (
-            <div key={index} className="timeline-item">
+            <div key={index} className="timeline-card">
               <div className="timeline-dot"></div>
-              <div className="timeline-year">{item.year}</div>
-              <div className="timeline-content">
+              <div className="timeline-line"></div>
+              <div className="timeline-info">
+                <span className="timeline-year">{item.year}</span>
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
               </div>

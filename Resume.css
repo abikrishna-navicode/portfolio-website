@@ -1,6 +1,6 @@
 .resume {
   padding: 80px 10%;
-  background: linear-gradient(135deg, #1a1f3d, #2e42d4);
+  background: linear-gradient(135deg, #f3f3f3);
   color: #fff;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -16,13 +16,13 @@
 .resume-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #00c9ff;
+  color: #080808;
   margin-bottom: 10px;
 }
 
 .resume-header p {
   font-size: 1.1rem;
-  color: #cdd8ff;
+  color: #0e0e0e;
 }
 
 .resume-container {
@@ -49,14 +49,14 @@
 
 .resume-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 15px 40px rgba(243, 242, 242, 0.25);
 }
 
 .resume-year {
   position: absolute;
   top: -15px;
   right: 20px;
-  background: #00c9ff;
+  background: #00aaff;
   color: #fff;
   padding: 6px 12px;
   border-radius: 12px;
@@ -67,7 +67,7 @@
 
 .resume-card h3 {
   font-size: 1.2rem;
-  color: #2e42d4;
+  color: #0e0e0e;
   margin-top: 15px;
   margin-bottom: 8px;
   font-weight: 600;
@@ -75,7 +75,7 @@
 
 .resume-card h4 {
   font-size: 1rem;
-  color: #00c9ff;
+  color: #2e42d4;
   margin-bottom: 10px;
 }
 

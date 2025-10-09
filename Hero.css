@@ -4,7 +4,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 100px 10%;
-  background: linear-gradient(-45deg, #2e2e93, #568ff2, #1d6a91, #4db5fa);
+  background: linear-gradient(-45deg, #4e22fd, #0c54d2, #16648a, #1391e4);
   background-size: 400% 400%;
   animation: gradientBG 12s ease infinite;
   color: #fff;
@@ -80,13 +80,13 @@
 
 .social-icon {
   font-size: 28px;
-  color: white;
+  color: #00aaff;
   margin-right: 10px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #00aaff;
+  color: #fafbfb;
   transform: scale(1.2) rotate(5deg);
 }
 
