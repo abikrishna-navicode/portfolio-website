@@ -1,0 +1,122 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px 10%;
+  background: linear-gradient(-45deg, #4e22fd, #0c54d2, #16648a, #1391e4);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  color: #fff;
+}
+
+.hero-left h1 span.hero-name {
+  color: #65ccff;
+}
+
+.hero-left h2 {
+  font-size: 24px;
+}
+
+.hero-left p {
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.btn-hire,
+.btn-projects {
+  text-decoration: none; /* removes underline */
+  display: inline-block;
+  transition: all 0.3s ease; /* smooth hover animation */
+}
+
+.btn-hire {
+  background: white;
+  color: #00aaff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.btn-hire:hover {
+  background: #00aaff;
+  color: white;
+  transform: scale(1.05); /* slight grow effect on hover */
+}
+
+.btn-projects {
+  background: #00aaff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+
+.btn-projects:hover {
+  background: white;
+  color: #00aaff;
+  transform: scale(1.05);
+}
+
+.hero-socials {
+  margin-top: 30px;
+}
+
+.social-icon {
+  font-size: 28px;
+  color: #00aaff;
+  margin-right: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fafbfb;
+  transform: scale(1.2) rotate(5deg);
+}
+
+.experience {
+  margin-top: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.experience-icon {
+  margin-right: 8px;
+  color: #00aaff;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.profile-frame {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

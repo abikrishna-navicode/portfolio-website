@@ -1,0 +1,207 @@
+.skills {
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f5f5f6);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.skills-header {
+  margin-bottom: 60px;
+}
+
+.skills-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #070707;
+}
+
+.skills-header p {
+  font-size: 1.1rem;
+  color: #0a0a0a;
+}
+
+/* Cards */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+}
+
+.skill-icon {
+  color: #00c9ff;
+  margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #1a1f3d;
+}
+
+.skill-card h4 {
+  font-size: 1rem;
+  color: #2e42d4;
+  margin-bottom: 0.8rem;
+}
+
+.skill-desc {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+/* Progress Bar */
+.progress-group {
+  margin-bottom: 0.8rem;
+}
+
+.progress-bar {
+  background: #eaeaea;
+  height: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0.3rem 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00c9ff, #00aaff);
+  transition: width 1.2s ease-in-out;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1f3d;
+}
+
+/* Workflow Section */
+.workflow-section {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.workflow-content {
+  flex: 1;
+  text-align: left;
+}
+
+.workflow-content h3 {
+  color: #090909;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.workflow-content p {
+  color: #080808;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.workflow-content ul {
+  list-style: none;
+  color: #2e42d4;
+  padding-left: 0;
+}
+
+.workflow-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.workflow-image {
+  flex: 1;
+  text-align: center;
+}
+
+.workflow-image img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Animation delay per card */
+.skill-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skill-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.skill-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .workflow-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .workflow-content {
+    text-align: center;
+  }
+
+  .workflow-image {
+    margin-top: 1.5rem;
+  }
+}
